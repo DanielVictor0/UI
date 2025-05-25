@@ -12,7 +12,7 @@ beforeEach(() => {
     cy.get('.products > .row')
     //cy.get('.block-inner')
       //.first()
-      //.last()
+    //.last()
       //.eq(1)
       .contains('Apollo Running Short')
       .click()
