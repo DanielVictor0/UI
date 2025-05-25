@@ -9,7 +9,7 @@ describe('funcionalidade: Login', ()  => {
     });
 
        beforeEach(() => {
-        //cy.screenshot()   ///usado para tirar print da tela
+        
     });
     
     it('deve fazer  login com sucesso',() => {
