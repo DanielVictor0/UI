@@ -9,7 +9,7 @@ describe('funcionalidade: Login', ()  => {
     });
 
        beforeEach(() => {
-        cy.screenshot()   ///usado para tirar print da tela
+        //cy.screenshot()   ///usado para tirar print da tela
     });
     
     it('deve fazer  login com sucesso',() => {
@@ -22,10 +22,11 @@ describe('funcionalidade: Login', ()  => {
 
 
     it('Deve exibir uma mensagem de erro ao inserir usuário inválido', () => {
-       cy.get('#username').type('victor.@gmail.com') 
+
+      cy.get('#username').type('victor.@gmail.com') 
        cy.get('#password').type('@VICTOR123')
        cy.get('.woocommerce-form > .button').click()
-//cy.get('.woocommerce-error').should('contain','Endereço de e-mail desconhecido.')
+      //cy.get('.woocommerce-error').should('contain','Erro: O nome de usuário ou endereço de e-mail fornecido não está cadastrado neste site. Verifique seu nome de usuário e tente novamente.')
        cy.get('.woocommerce-error').should('exist')
 
     });
