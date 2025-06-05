@@ -1,9 +1,10 @@
 ///<reference types="cypress"/>
+const perfil = require('../../fixtures/perfil.json')
 
 describe('funcionalidade: Login', ()  => {
 
     beforeEach(() => {
-        cy.visit('http://lojaebac.ebaconline.art.br/my-account/')  ///url do site
+        cy.visit('my-account')  ///url do site
         
         
     });
@@ -41,5 +42,28 @@ describe('funcionalidade: Login', ()  => {
 
     });
 
-})
+    it('Deve fazer login com sucesso - Usando Fixture ', () => { 
+         cy.fixture('perfil').then((dados) => {
+         cy.get('#username').type(dados.usuario, {log: false}) //desabilitando o log do console
+         cy.get('#password').type(dados.senha, {log: false})
+         cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain','Olá, victor.teste ')
+
+
+         
+          
+          })
+
+    
+         })
+
+      it.only('Deve fazer login com sucesso - Usando comando customizado', () => {
+        cy.login('victor.teste@gmail.com', '@VICTOR123')
+         cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain','Olá, victor.teste (não é victor.teste? Sair)')
+
+
+
+      })
+
+});
+
 
