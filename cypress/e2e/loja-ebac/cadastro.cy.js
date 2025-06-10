@@ -41,8 +41,8 @@ describe('funcionalidade: Cadastro', () => {
 
       it.only('Deve completar o cadastro com sucesso - Usando Comando customizado', () => {
         cy.preCadstro(faker.internet.email(), faker.internet.password(), faker.person.firstName(), faker.person.lastName())
-        cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('exist') ///validando se o cadastro foi realizado com sucesso
-        cy.get('.woocommerce-message').should('exist') ///validando se a mensagem de sucesso foi exibida  
+        cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('exist') 
+        cy.get('.woocommerce-message').should('exist')  
  
 
 
