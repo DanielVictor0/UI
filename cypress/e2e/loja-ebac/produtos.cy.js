@@ -7,7 +7,6 @@ beforeEach(() => {
 });
    
 
-
  it('Deve selecionar um produto da lista', () => {
     cy.get('.products > .row')
     //cy.get('.block-inner')
