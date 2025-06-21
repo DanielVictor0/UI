@@ -43,6 +43,7 @@ it('Deve visitar a pagina do produto', () => {
         dados[0].tamanho, 
         dados[0].cor, 
         dados[0].quantidade) 
+        
         cy.get('.woocommerce-message').should('exist')
 
 
