@@ -1,0 +1,26 @@
+[
+     {
+        "nomeProduto": "Aero Daily Fitness Tee",
+        "tamanho": "XS",
+        "cor": "Yellow",
+        "quantidade": 4
+     },
+
+     
+      {
+        "nomeProduto": "Atlas Fitness Tank",
+        "tamanho": "S",
+        "cor": "Blue",
+        "quantidade": 6
+     },
+
+
+      {
+        "nomeProduto": "Beaumont Summit Kit",
+        "tamanho": "L",
+        "cor": "Red",
+        "quantidade": 3
+     }
+     
+
+]
